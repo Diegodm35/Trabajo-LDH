@@ -34,8 +34,11 @@ public class HarshadNumber {
             b /= 10;
             c++;
         }
-
-        if (a % sum == 0) {
+        if (sum == 0 || a % sum != 0) {
+            System.out.println(a + " is not a Harshad Number");
+            return;
+        }
+        else {
             System.out.println(a + " is a Harshad Number");
 
             // For you better explanation how is that a Harshad Number
@@ -50,8 +53,6 @@ public class HarshadNumber {
 
             System.out.println("= " + sum);
             System.out.println(sum + " × " + (a / sum) + " = " + a);
-        } else {
-            System.out.println(a + " is not a Harshad Number");
         }
     }
 }

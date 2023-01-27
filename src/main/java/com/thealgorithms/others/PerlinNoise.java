@@ -52,7 +52,9 @@ public class PerlinNoise {
                 }
             }
         }
-
+        if (totalAmplitude <= 0) {
+            throw new IllegalArgumentException("totalAmplitude must be greater than 0");
+        }
         // normalize values so that they stay between 0..1
         for (int x = 0; x < width; x++) {
             for (int y = 0; y < height; y++) {

@@ -68,6 +68,9 @@ class PageRank {
                             }
                             k = k + 1;
                         }
+                        if (OutgoingLinks == 0) {
+                            OutgoingLinks = 1;
+                        }
                         // Calculate PageRank
                         this.pagerank[InternalNodeNumber] += TempPageRank[ExternalNodeNumber] * (1 / OutgoingLinks);
                     }
