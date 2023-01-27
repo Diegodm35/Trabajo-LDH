@@ -21,11 +21,11 @@ package com.thealgorithms.datastructures.trees;/* Author : Suraj Kumar
 import java.util.ArrayList;
 
 // Using auxiliary array to find the random node in a given binary tree
-class Node {
+class Node_ {
     int item;
-    Node left, right;
+    Node_ left, right;
 
-    public Node(int key) {
+    public Node_(int key) {
         item = key;
         left = right = null;
     }
@@ -36,14 +36,14 @@ public class TreeRandomNode {
     // Using an arraylist to store the inorder traversal of the given binary tree
     static ArrayList<Integer> list = new ArrayList<>();
     // root of Tree
-    Node root;
+    Node_ root;
 
     TreeRandomNode() {
         root = null;
     }
 
     // Now lets find the inorder traversal of the given binary tree
-    static void inOrder(Node node) {
+    static void inOrder(Node_ node) {
         if (node == null)
             return;
 
@@ -55,7 +55,7 @@ public class TreeRandomNode {
         inOrder(node.right);
     }
 
-    public void getrandom(Node val)
+    public void getrandom(Node_ val)
     {
         inOrder(val);
         // getting the count of node of the binary tree

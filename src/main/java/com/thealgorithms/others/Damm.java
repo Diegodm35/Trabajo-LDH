@@ -81,13 +81,13 @@ public class Damm {
 
     public static void main(String[] args) {
         System.out.println("Damm algorithm usage examples:");
-        var validInput = "5724";
-        var invalidInput = "5824";
+        String validInput = "5724";
+        String invalidInput = "5824";
         checkAndPrint(validInput);
         checkAndPrint(invalidInput);
 
         System.out.println("\nCheck digit generation example:");
-        var input = "572";
+        String input = "572";
         generateAndPrint(input);
     }
 

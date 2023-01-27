@@ -108,7 +108,7 @@ public class Verhoeff {
         checkInput(initialDigits);
 
         // Add zero to end of input value
-        var modifiedDigits = initialDigits + "0";
+        String modifiedDigits = initialDigits + "0";
 
         int[] numbers = toIntArray(modifiedDigits);
 
@@ -125,13 +125,13 @@ public class Verhoeff {
 
     public static void main(String[] args) {
         System.out.println("Verhoeff algorithm usage examples:");
-        var validInput = "2363";
-        var invalidInput = "2364";
+        String validInput = "2363";
+        String invalidInput = "2364";
         checkAndPrint(validInput);
         checkAndPrint(invalidInput);
 
         System.out.println("\nCheck digit generation example:");
-        var input = "236";
+        String input = "236";
         generateAndPrint(input);
     }
 
