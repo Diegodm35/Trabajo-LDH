@@ -26,7 +26,6 @@ jobs:
       - run:
           name: Test
           command: mvn test
-    steps:
       - run:
           name: Save test results
           command: |
