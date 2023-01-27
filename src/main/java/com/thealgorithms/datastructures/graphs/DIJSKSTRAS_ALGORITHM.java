@@ -4,11 +4,21 @@ for better understanding
  */
 package com.thealgorithms.datastructures.graphs;
 
-
+/**
+ *
+ * @brief El algortimo de Dijkstra es un algoritmo para encontrar las rutas más cortas entre nodos en un grafo, que puede representar, por ejemplo, redes de carreteras.
+ */
 class dijkstras {
 
     int k = 9;
 
+    /**
+     * @brief Función para encontrar el vértice con la distancia mínima, de los
+     * vértices aún no incluidos en el conjunto de vértices más cortos
+     * @param dist Distancia de los vértices
+     * @param Set Conjunto de vértices
+     * @return El vértice con la distancia mínima
+     */
     int minDist(int dist[], Boolean Set[]) {
         int min = Integer.MAX_VALUE, min_index = -1;
 
@@ -22,6 +32,10 @@ class dijkstras {
         return min_index;
     }
 
+    /**
+     * @brief Función para imprimir la matriz de distancias
+     * @param dist Distancia de los vértices
+     */
     void print(int dist[]) {
         System.out.println("Vertex \t\t Distance");
         for (int i = 0; i < k; i++) {
@@ -30,6 +44,13 @@ class dijkstras {
     }
 	
 
+    /**
+     * @brief Función para encontrar las distancias más cortas de un vértice
+     * raiz a todos los otros vértices en un grafo dado con representación de
+     * matriz de adyacencia
+     * @param graph Matriz de adyacencia
+     * @param src Vértice fuente
+     */
     void dijkstra(int graph[][], int src) {
         int dist[] = new int[k];
         Boolean Set[] = new Boolean[k];
